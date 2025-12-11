@@ -146,7 +146,7 @@ void integrator_SDE_fuel(int T, int N, double dt, double n0, double v0, double q
             MatrixXd gamma_half = gamma_half_matrix(phi[i], v0, zeta, zeta_theta, zeta_n);
             VectorXd random_noises(4);
             //for (int k0 = 0; k0 < 4; ++k0) random_noises[k0] = noise_dist(gen);
-	    random_noises[0] = sqrt(2.0 * q_t) * noise_dist(gen);
+	    	random_noises[0] = sqrt(2.0 * q_t) * noise_dist(gen);
             random_noises[1] = sqrt(2.0 * q_t) * noise_dist(gen);
             random_noises[2] = sqrt(2.0 * q_r) * noise_dist(gen);
             random_noises[3] = sqrt(2.0 * q_n) * noise_dist(gen);
